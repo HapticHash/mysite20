@@ -1,0 +1,23 @@
+.hbar1 {
+ display: inline;
+ margin: 15px;
+}
+
+body{
+     background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    color: white;
+    padding: 1em;
+}
+
+h1{
+    color: brown;
+    font-size: 30px;
+    font-style: italic;
+    position: center;
+}

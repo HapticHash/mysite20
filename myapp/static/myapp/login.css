@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 3% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  border-radius: 1em;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+}
+.form-control {
+    margin-bottom: 1em;
+}
+.form input[type=submit] {
+  font-family: "Roboto", sans-serif;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.btn {
+  margin: 1em 0 0 0;
+  padding: 0.5em 2em;
+}
+
+body {
+  /*background: #00d2ff;  !* fallback for old browsers *!*/
+  /*background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  !* Chrome 10-25, Safari 5.1-6 *!*/
+  /*background: linear-gradient(to right, #3a7bd5, #00d2ff); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 10vh;
+  color: #FFFFFF;
+}

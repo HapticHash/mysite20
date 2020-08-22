@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    Hello Harshit, Saharsh, Ritu, Harpreet
+{% endblock %}
+{% block body_block %}
+    <h3> Available courses are: </h3>
+
+<ol>
+    {% for course in course_list %}
+        <li>
+            <p> {{course}} </p>
+        </li>
+    {% endfor %}
+</ol>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'myapp/base0.html' %}
+
+{% block body_block %}
+    <div class="heading"> Login page </div>
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form" method="POST">
+            {% csrf_token %}
+          <input type="text" class="form-control" placeholder="username" name="username"/>
+          <input type="password" class="form-control" placeholder="password" name="password"/>
+          <input type="submit" class="btn btn-primary btn" value="Login">
+            <p class="message mt-4">Not registered yet? <a href="{% url 'myapp:register' %}">Create an account</a></p>
+       <p class="message"><a href= "{% url 'myapp:forgot_password' %}">Forgot password</a> </p>
+        </form>
+      </div>
+    </div>
+{% endblock %}

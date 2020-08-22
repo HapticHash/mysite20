@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<h2> Details of Topic are: </h2>
+<p> Topic Name is: {{ topic.name }} </p>
+<p> Topic category is: {{ topic.category }} </p>
+<h2> Courses of Topic are: </h2>
+<ol>
+{% for course in courses %}
+    <li>{{ course.name }}</li>
+{% endfor %}
+</ol>
+<p><a href="/myapp/">Home page</a></p>
+</body>
+</html>

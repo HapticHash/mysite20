@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<style>
+
+body {
+  /*background: #00d2ff;  !* fallback for old browsers *!*/
+  /*background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  !* Chrome 10-25, Safari 5.1-6 *!*/
+  /*background: linear-gradient(to right, #3a7bd5, #00d2ff); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+    .cust {
+        width: 40%;
+        margin: 2em auto;
+        padding: 1em;
+
+    }
+</style>
+</head>
+<body>
+
+
+<div class="card cust">
+<form action="logout">
+    <input type="submit" class="btn btn-danger float-right mr-2 mt-2" value="logout"/>
+</form>
+    <p>Student's First name : {{ student.first_name }} </p>
+<p>Student's Last name : {{ student.last_name }} </p>
+<h4>Orders made by student are:</h4>
+<ul>
+{% for order in orders.all %}
+    <li>{{ order }}</li>
+    <ol>
+    {% for course in order.courses.all %}
+        <li>{{ course }}</li>
+    {% endfor %}
+    </ol>
+{% endfor %}
+</ul>
+<h5>Topics in which student is intertested are:</h5>
+<ul>
+{% for topic in topics.all %}
+    <li>{{ topic.name }}</li>
+{% endfor %}
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'myapp/base.html' %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+</head>
+{% block body_block %}
+    <div class="container">
+      <div class="row justify-content-md-center h-100">
+        <div class="col-lg-6">
+          <h1 class="mt-2 text-white">Share your views</h1>
+          <hr class="mt-0 mb-2">
+<form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+    <input class="btn btn-success" type="submit" value="Submit">
+    </form>
+    {{ msg }}
+    </div>
+      </div>
+    </div>
+{% endblock %}
+</html>

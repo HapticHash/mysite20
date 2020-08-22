@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+ <meta charset="UTF-8">
+ <title>E-Learning WebApp!</title>
+</head>
+<body>
+ {% if top_list %}
+ <h2>List of Topics</h2>
+ <ol>
+ {% for top in top_list %}
+     <li> <a href="/myapp/{{forloop.counter }}">{{ top.name}} </a> </li>
+ {% endfor %}
+ </ol>
+ {% else %}
+ <strong>There are no available topics!</strong>
+ {% endif %}
+
+{% if course_list %}
+    <h2>List of Courses (sorted by price): </h2>
+    <ol>
+    {% for course in course_list %}
+        <li>
+            <p> {{course}} </p>
+        {% if course.for_everyone %}
+            This Course is For Everyone!
+            {% else %}
+            This Course is not For Everyone!
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ol>
+{% endif %}
+ <p><a href="/myapp/about">About page</a></p>
+</body>
+</html>
